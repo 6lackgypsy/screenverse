@@ -25,7 +25,7 @@ const App = () => {
   const [loadingTrendingMovies, setLoadingTrendingMovies] = useState("")
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("")
 
-  useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm])
+  useDebounce(() => setDebouncedSearchTerm(searchTerm), 750, [searchTerm])
 
   const fetchMovies = async (query = "") => {
     setLoadingMovies(true)
@@ -84,7 +84,7 @@ const App = () => {
 
   useEffect(() => {
     loadTrendingMovies()
-  }, [trendingMovies])
+  }, [])
 
   return (
     <main>
