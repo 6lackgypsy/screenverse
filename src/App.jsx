@@ -84,7 +84,7 @@ const App = () => {
 
   useEffect(() => {
     loadTrendingMovies()
-  }, [])
+  }, [trendingMovies])
 
   return (
     <main>
